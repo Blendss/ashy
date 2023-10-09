@@ -1,0 +1,291 @@
+:root{
+  --size: 960px;
+  --sizefoto: 440px;
+  --modalsize: 600px;
+}
+@media screen and (max-width: 950px) {
+  :root{
+    --size: 360px;
+    --sizefoto: 180px;
+    --modalsize: 400px;
+  }
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexconteiner{
+    display: flex;
+    justify-content: center;
+    width: var(--size);
+}
+
+.navbar {
+    display: flex;
+    border-width: thin;
+    justify-content: center;
+    border-style: solid;
+    width: calc(100% + 15px);
+    height: 52px;
+    border-left: 5px;
+    border-right: 5px;
+    border-color: rgb(236, 236, 236);
+}
+
+.lista {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    width: var(--size);
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.item {
+    width: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  h4{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: "Poppins",sans-serif;
+  }
+
+  .header {
+    width: var(--size);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  a{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: "Poppins",sans-serif;
+    text-decoration: none;
+    color: black;
+  }
+  
+  * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 60px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  font-family: "Poppins",sans-serif;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.foto {
+    object-fit: fill;
+    width: calc(var(--size) - 20px);
+    height: var(--sizefoto);
+}
+
+.link2 {
+    border-color: rgb(236, 236, 236); 
+    border-width: thin; 
+    border-style: solid;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    padding-left: 10px;
+}
+
+.texto {
+    font-family: "Poppins",sans-serif;
+    text-align: justify;
+}
+
+/* Estilo para o modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--modalsize);
+  height: var(--modalsize);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 20px;
+  font-family: "Poppins",sans-serif;
+}
+
+.forminput{
+  font-family: "Poppins",sans-serif;
+  width: 90%;
+  height: 40px;
+  font-size: larger;
+  background-color: #f1f1f1;
+  border: 0px;
+}
+
+.divform{
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins",sans-serif;
+  justify-content: space-around;
+  height: calc( var(--modalsize) - 100px);
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1; /* Coloque o z-index abaixo dos modais */
+}
+
+.btn_sair {
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Poppins",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 0px;
+  margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.tend {
+  width: 50%;
+  height: auto;
+}
+
+.divresponsive{
+  width: var(--size);
+}
